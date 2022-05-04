@@ -13,20 +13,19 @@ public class NoticeService {
         this.noticeMapper = noticeMapper;
     }
 
-    public List<NoticeDto> getNoticeList() {
-        return null;   // TODO - 잘못된 코드입니다. 정상적으로 동작하도록 수정하세요.
+    public List<NoticeDto> getNoticeList(NoticeDto noticeDao) {
+        return noticeMapper.getNoticeList(noticeDao);   // TODO
     }
 
-    public NoticeDto getNotice() {
-        return null;    // TODO - 잘못된 코드입니다. 정상적으로 동작하도록 수정하세요.
+    public NoticeDto getNotice(Integer id) {
+        return noticeMapper.getNotice(id);    // TODO
     }
 
     public Integer createNotice(NoticeDto noticeDao) {
-
-        return null;    // TODO - 잘못된 코드입니다. 정상적으로 동작하도록 수정하세요.
+        return noticeMapper.createNotice(noticeDao);    // TODO
     }
 
     public Integer updateNotice(NoticeDto noticeDao) {
-        return null;    // TODO - 잘못된 코드입니다. 정상적으로 동작하도록 수정하세요.
+        return noticeMapper.updateNotice(noticeDao);    // TODO
     }
 }
