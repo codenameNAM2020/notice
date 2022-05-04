@@ -7,17 +7,62 @@
 
     <select id="getNoticeList" resultType="com.bluedigm.notice.NoticeDto">
         <!-- TODO - 이곳에 쿼리를 입력하세요 -->
+        SELECT
+            TNot.id
+            , TNot.userId
+            , TNot.title
+            , TNot.contents
+            , FORMATDATETIME(sysdate, 'yyyy-MM-dd') AS regDate
+            , TNot.hit
+        FROM
+            tb_notice AS TNot
+        ORDER BY regDate
     </select>
 
     <select id="getNotice" resultType="com.bluedigm.notice.NoticeDto">
         <!-- TODO - 이곳에 쿼리를 입력하세요 -->
+        SELECT
+            id
+            , userId
+            , title
+            , contents
+            , reqDate
+            , git
+        FROM
+            tb_notice
+        WHERE
+            id = #{id}
     </select>
 
     <insert id="createNotice" parameterType="com.bluedigm.notice.NoticeDto">
         <!-- TODO - 이곳에 쿼리를 입력하세요 -->
+        INSERT INTO tb_notice(
+            id
+            , userId
+            , title
+            , contents
+            , regDate
+            , hit
+        ) VALUES (
+            'Z'
+            , #{userId}
+            , #{title}
+            , #{contents}
+            , NOW()
+            , #{hit}
+        )
     </insert>
 
     <update id="updateNotice" parameterType="com.bluedigm.notice.NoticeDto">
         <!-- TODO - 이곳에 쿼리를 입력하세요 -->
+        UPDATE tb_notice
+            SET
+                userID = #{userId}
+                , title = #{title}
+                , contents = #{contents}
+                , regDate = NOW()
+                , hit = #{hit}
+        WHERE
+            id = #{id}
     </update>
 </mapper>
