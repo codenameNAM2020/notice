@@ -2,9 +2,9 @@ package com.bluedigm.notice;
 
 import java.util.List;
 
-public class NoticeDto {
+public class NoticeDto {    //getter, setter
 
-    // TODO - 이곳에 필요한 데이터를 넣으시요.
+    // TODO
     private String title;
 
     private int id;
