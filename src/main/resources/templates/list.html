@@ -21,12 +21,12 @@
     </thead>
     <tbody>
     <!--- TODO - START - thymeleaf 문법을 이용하여 리스트를 그려보세요 -->
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr th:each="item : ${list}">
+            <td th:text="${item.id}"></td>
+            <td><a href="${id}" th:text="${item.title}"></a></td>
+            <td th:text="${item.userId}"></td>
+            <td th:text="${item.hit}"></td>
+            <td th:text="${item.regDate}"></td>
         </tr>
     <!--- TODO - END - thymeleaf 문법을 이용하여 리스트를 그려보세요 -->
     </tbody>
