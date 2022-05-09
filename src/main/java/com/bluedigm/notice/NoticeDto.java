@@ -10,7 +10,7 @@ public class NoticeDto {    //getter, setter
     private int id;
     private String userId;
     private String contents;
-    private String datetime;
+    private String regDate;
     private int hit;
 
     private List<NoticeDto> getNoticeList;
@@ -43,11 +43,11 @@ public class NoticeDto {    //getter, setter
         this.contents = contents;
     }
 
-    public String getDatetime() {
-        return datetime;
+    public String getRegDate() {
+        return regDate;
     }
-    public void setDatetime(String datetime) {
-        this.datetime = datetime;
+    public void setRegDate(String datetime) {
+        this.regDate = regDate;
     }
 
     public int getHit() {
