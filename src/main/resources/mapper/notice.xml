@@ -8,14 +8,14 @@
     <select id="getNoticeList" resultType="com.bluedigm.notice.NoticeDto">
         <!-- TODO - 이곳에 쿼리를 입력하세요 -->
         SELECT
-            TNot.id
-            , TNot.userId
-            , TNot.title
-            , TNot.contents
+            id
+            , userId
+            , title
+            , contents
             , FORMATDATETIME(sysdate, 'yyyy-MM-dd') AS regDate
-            , TNot.hit
+            , hit
         FROM
-            tb_notice AS TNot
+            tb_notice
         ORDER BY regDate
     </select>
 
@@ -26,8 +26,8 @@
             , userId
             , title
             , contents
-            , reqDate
-            , git
+            , regDate
+            , hit
         FROM
             tb_notice
         WHERE
@@ -44,7 +44,7 @@
             , regDate
             , hit
         ) VALUES (
-            'Z'
+            #{id}
             , #{userId}
             , #{title}
             , #{contents}
@@ -57,8 +57,9 @@
         <!-- TODO - 이곳에 쿼리를 입력하세요 -->
         UPDATE tb_notice
             SET
-                userID = #{userId}
+                id = #{id}
                 , title = #{title}
+                , userId = #{userId}
                 , contents = #{contents}
                 , regDate = NOW()
                 , hit = #{hit}
