@@ -55,13 +55,12 @@
         <!-- TODO - 이곳에 쿼리를 입력하세요 -->
         UPDATE tb_notice
             SET
-                id = #{id}
-                , title = #{title}
+                title = #{title}
                 , userId = #{userId}
                 , contents = #{contents}
-                , regDate = NOW()
-                , hit = #{hit}
         WHERE
             id = #{id}
     </update>
+
+
 </mapper>
