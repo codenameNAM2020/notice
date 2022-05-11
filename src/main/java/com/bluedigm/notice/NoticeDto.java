@@ -46,7 +46,7 @@ public class NoticeDto {    //getter, setter
     public String getRegDate() {
         return regDate;
     }
-    public void setRegDate(String datetime) {
+    public void setRegDate(String regDate) {
         this.regDate = regDate;
     }
 
