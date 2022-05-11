@@ -26,7 +26,7 @@
             <td><a th:href="'/detail/'+${item.id}" th:text="${item.title}"></a></td>
             <td th:text="${item.userId}"></td>
             <td th:text="${item.hit}"></td>
-            <td th:text="${item.regDate}"></td>
+            <td th:text="${#temporals.format(item.regDate, 'yyyy-MM-dd')}"></td>
         </tr>
     <!--- TODO - END - thymeleaf 문법을 이용하여 리스트를 그려보세요 -->
     </tbody>

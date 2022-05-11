@@ -1,5 +1,6 @@
 package com.bluedigm.notice;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class NoticeDto {    //getter, setter
@@ -10,7 +11,7 @@ public class NoticeDto {    //getter, setter
     private int id;
     private String userId;
     private String contents;
-    private String regDate;
+    private LocalDateTime regDate;
     private int hit;
 
     private List<NoticeDto> getNoticeList;
@@ -43,10 +44,10 @@ public class NoticeDto {    //getter, setter
         this.contents = contents;
     }
 
-    public String getRegDate() {
+    public LocalDateTime getRegDate() {
         return regDate;
     }
-    public void setRegDate(String regDate) {
+    public void setRegDate(LocalDateTime regDate) {
         this.regDate = regDate;
     }
 

@@ -12,7 +12,7 @@
             , userId
             , title
             , contents
-            , FORMATDATETIME(sysdate, 'yyyy-MM-dd') AS regDate
+            , regDate
             , hit
         FROM
             tb_notice

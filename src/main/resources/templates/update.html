@@ -28,7 +28,7 @@
     </tr>
     <tr>
         <th>등록 날짜</th>
-        <td th:text="${update.regDate}"></td>
+        <td th:text="${#temporals.format(update.regDate, 'yyyy-MM-dd')}"></td>
     </tr>
     <tr>
         <th>조회수</th>
