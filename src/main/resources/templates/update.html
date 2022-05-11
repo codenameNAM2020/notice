@@ -8,7 +8,7 @@
 <body>
 
 <!-- TODO - 수정할 데이터를 각 INPUT에 넣어주고 저장 버튼을 눌렀을 때 데이터가 수정되도록 작업하세요 -->
-<form method="post" th:action="@{/update}">
+<form method="post" th:action="@{'/update/' + ${id}}">
 <table class="table">
     <tr>
         <th>id</th>
@@ -35,7 +35,7 @@
         <td th:text="${update.hit}"></td>
     </tr>
 </table>
-<a href="/update" class="btn btn-secondary btn-lg">수정하기</a>
+<button th:href="'/update/' + ${id}" class="btn btn-secondary btn-lg" th:type="submit">수정하기</button>
 </form>
 <br>
 <p><a href="/" class="btn btn-secondary btn-lg">목록으로</a></p>
