@@ -37,15 +37,13 @@
     <insert id="createNotice" parameterType="com.bluedigm.notice.NoticeDto">
         <!-- TODO - 이곳에 쿼리를 입력하세요 -->
         INSERT INTO tb_notice(
-            id
-            , userId
+            userId
             , title
             , contents
             , regDate
             , hit
         ) VALUES (
-            #{id}
-            , #{userId}
+            #{userId}
             , #{title}
             , #{contents}
             , NOW()
