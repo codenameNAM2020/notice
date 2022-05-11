@@ -32,7 +32,7 @@ public class NoticeController {
     @GetMapping("/detail/{id}")
     public String viewGetNotice(@PathVariable Integer id, Model model) {
         //id: String -> Integer (Dto와 Service에서 id가 integer형)
-
+        noticeService.updateHit(id);
         model.addAttribute("detail", noticeService.getNotice(id));
 
         return "view";

@@ -62,5 +62,11 @@
             id = #{id}
     </update>
 
-
+    <update id="updateHit">
+        update tb_notice
+            set
+                hit = hit + 1
+        where
+            id = #{id}
+    </update>
 </mapper>

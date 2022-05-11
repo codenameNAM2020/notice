@@ -28,4 +28,8 @@ public class NoticeService {
     public Integer updateNotice(NoticeDto noticeDao) {
         return noticeMapper.updateNotice(noticeDao);    // TODO
     }
+
+    public Integer updateHit (int id) {
+        return noticeMapper.updateHit(id);
+    }
 }
