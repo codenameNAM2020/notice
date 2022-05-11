@@ -20,20 +20,20 @@ public class NoticeController {
 
     // 전체 목록 조회
     @GetMapping("/")
-    public String list(NoticeDto noticeDao, Model model) {
+    public String list(Model model) {
         //NoticeDto noticeDao 추가 -> noticeService에서 getNoticeList를 불러오기 위해, 파라미터 주입
 
-        model.addAttribute("list", noticeService.getNoticeList(noticeDao));// TODO
+        model.addAttribute("list", noticeService.getNoticeList());// TODO
 
         return "list";
     }
 
     // 개별 조회
-    @GetMapping("/{id}")
+    @GetMapping("/detail/{id}")
     public String viewGetNotice(@PathVariable Integer id, Model model) {
         //id: String -> Integer (Dto와 Service에서 id가 integer형)
 
-        model.addAttribute("", noticeService.getNotice(id));
+        model.addAttribute("detail", noticeService.getNotice(id));
 
         return "view";
     }
@@ -54,17 +54,18 @@ public class NoticeController {
     }
 
     // 수정 페이지 이동
-    @GetMapping("/update")
-    public String updateNoticeForm() {
+    @GetMapping("/update/{id}")
+    public String updateNoticeForm(@PathVariable Integer id, Model model) {
+        model.addAttribute("update", noticeService.getNotice(id));
         return "update";
     }
 
 
     // 수정
-    @PostMapping("/update")
+    @PostMapping("/update/{id}")
     public String updateNotice(@ModelAttribute NoticeDto noticeDao) {
 
-        noticeService.updateNotice(noticeDao);  // TODO
+        noticeService.updateNotice(noticeDao); // TODO
 
         return "redirect:/";
     }
