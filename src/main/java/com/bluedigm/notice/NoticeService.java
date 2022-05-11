@@ -13,8 +13,8 @@ public class NoticeService {
         this.noticeMapper = noticeMapper;
     }
 
-    public List<NoticeDto> getNoticeList(NoticeDto noticeDao) {
-        return noticeMapper.getNoticeList(noticeDao);   // TODO
+    public List<NoticeDto> getNoticeList() {
+        return noticeMapper.getNoticeList();   // TODO
     }
 
     public NoticeDto getNotice(Integer id) {
