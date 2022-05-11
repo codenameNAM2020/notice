@@ -34,7 +34,7 @@
         <td th:text="${detail.hit}"></td>
     </tr>
 </table>
-<a href="/update" class="btn btn-secondary btn-lg">수정하기</a>
+<a th:href="'/update/' + ${detail.id}" class="btn btn-secondary btn-lg">수정하기</a>
 
 </body>
 </html>
