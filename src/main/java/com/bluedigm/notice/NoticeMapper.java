@@ -7,7 +7,7 @@ import java.util.List;
 @Mapper
 public interface NoticeMapper {     //DAO
 
-    List<NoticeDto> getNoticeList(NoticeDto noticeDao);
+    List<NoticeDto> getNoticeList();
     NoticeDto getNotice(Integer id);
     Integer createNotice(NoticeDto noticeDao);
     Integer updateNotice(NoticeDto noticeDao);
