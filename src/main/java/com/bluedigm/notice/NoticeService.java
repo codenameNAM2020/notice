@@ -32,4 +32,8 @@ public class NoticeService {
     public Integer updateHit (int id) {
         return noticeMapper.updateHit(id);
     }
+
+    public Integer deleteNotice (Integer id) {
+        return noticeMapper.deleteNotice(id);
+    }
 }

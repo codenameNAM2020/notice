@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -35,7 +35,11 @@
         <td th:text="${update.hit}"></td>
     </tr>
 </table>
-<button th:href="'/update/' + ${id}" class="btn btn-secondary btn-lg" th:type="submit">수정하기</button>
+<button class="btn btn-secondary btn-lg" th:type="submit">수정하기</button>
+</form>
+<br>
+<form method="post" th:action="@{'/delete/' + ${id}}">
+<button class="btn btn-secondary btn-lg" th:type="submit">삭제하기</button>
 </form>
 <br>
 <p><a href="/" class="btn btn-secondary btn-lg">목록으로</a></p>

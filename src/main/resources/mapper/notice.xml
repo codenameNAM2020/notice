@@ -62,11 +62,18 @@
             id = #{id}
     </update>
 
-    <update id="updateHit">
-        update tb_notice
-            set
+    <delete id="deleteNotice" parameterType="com.bluedigm.notice.NoticeDto">
+        DELETE
+            FROM tb_notice
+        WHERE
+            id = #{id}
+    </delete>
+
+    <update id="updateHit" parameterType="com.bluedigm.notice.NoticeDto">
+        UPDATE tb_notice
+            SET
                 hit = hit + 1
-        where
+        WHERE
             id = #{id}
     </update>
 </mapper>
