@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class NoticeService {
+public class NoticeService {    //mapper interface의 구현
 
     private final NoticeMapper noticeMapper;
 

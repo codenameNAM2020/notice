@@ -28,11 +28,11 @@ public class NoticeController {
         return "list";
     }
 
-    // 개별 조회
+    // 개별 조회 (상세화면) - PathVariable을 통한 id값 삽입
     @GetMapping("/detail/{id}")
     public String viewGetNotice(@PathVariable Integer id, Model model) {
-        //id: String -> Integer (Dto와 Service에서 id가 integer형)
-        noticeService.updateHit(id);
+
+        noticeService.updateHit(id);    //조회수 처리
         model.addAttribute("detail", noticeService.getNotice(id));
 
         return "view";
