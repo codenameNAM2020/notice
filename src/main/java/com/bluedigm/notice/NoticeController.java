@@ -21,7 +21,6 @@ public class NoticeController {
     // 전체 목록 조회
     @GetMapping("/")
     public String list(Model model) {
-        //NoticeDto noticeDao 추가 -> noticeService에서 getNoticeList를 불러오기 위해, 파라미터 주입
 
         model.addAttribute("list", noticeService.getNoticeList());// TODO
 
