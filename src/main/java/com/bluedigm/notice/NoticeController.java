@@ -46,9 +46,9 @@ public class NoticeController {
 
     // 등록
     @PostMapping("/create")
-    public String createNotice(@ModelAttribute NoticeDto noticeDao) {
+    public String createNotice(@ModelAttribute NoticeDto noticeDto) {
 
-        noticeService.createNotice(noticeDao);  // TODO
+        noticeService.createNotice(noticeDto);  // TODO
 
         return "redirect:/";
     }
@@ -63,9 +63,9 @@ public class NoticeController {
 
     // 수정
     @PostMapping("/update/{id}")
-    public String updateNotice(@ModelAttribute NoticeDto noticeDao) {
+    public String updateNotice(@ModelAttribute NoticeDto noticeDto) {
 
-        noticeService.updateNotice(noticeDao); // TODO
+        noticeService.updateNotice(noticeDto); // TODO
 
         return "redirect:/";
     }

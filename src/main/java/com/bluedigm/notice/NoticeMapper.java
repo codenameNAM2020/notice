@@ -9,8 +9,8 @@ public interface NoticeMapper {     //DAO
 
     List<NoticeDto> getNoticeList();
     NoticeDto getNotice(Integer id);
-    Integer createNotice(NoticeDto noticeDao);
-    Integer updateNotice(NoticeDto noticeDao);
+    Integer createNotice(NoticeDto noticeDto);
+    Integer updateNotice(NoticeDto noticeDto);
     Integer deleteNotice(Integer id);
 
     Integer updateHit(int id);

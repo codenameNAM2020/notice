@@ -21,12 +21,12 @@ public class NoticeService {    //mapper interface의 구현
         return noticeMapper.getNotice(id);    // TODO
     }
 
-    public Integer createNotice(NoticeDto noticeDao) {
-        return noticeMapper.createNotice(noticeDao);    // TODO
+    public Integer createNotice(NoticeDto noticeDto) {
+        return noticeMapper.createNotice(noticeDto);    // TODO
     }
 
-    public Integer updateNotice(NoticeDto noticeDao) {
-        return noticeMapper.updateNotice(noticeDao);    // TODO
+    public Integer updateNotice(NoticeDto noticeDto) {
+        return noticeMapper.updateNotice(noticeDto);    // TODO
     }
 
     public Integer updateHit (int id) {
