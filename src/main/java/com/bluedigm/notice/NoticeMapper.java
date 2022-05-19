@@ -13,5 +13,5 @@ public interface NoticeMapper {     //DAO
     Integer updateNotice(NoticeDto noticeDto);
     Integer deleteNotice(Integer id);
 
-    Integer updateHit(int id);
+    Integer updateHit(Integer id);
 }

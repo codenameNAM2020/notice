@@ -29,7 +29,7 @@ public class NoticeService {    //mapper interface의 구현
         return noticeMapper.updateNotice(noticeDto);    // TODO
     }
 
-    public Integer updateHit (int id) {
+    public Integer updateHit (Integer id) {
         return noticeMapper.updateHit(id);
     }
 
