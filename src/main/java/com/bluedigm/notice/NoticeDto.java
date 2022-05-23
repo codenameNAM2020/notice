@@ -14,8 +14,6 @@ public class NoticeDto {    //getter, setter
     private LocalDateTime regDate;
     private int hit;
 
-    private List<NoticeDto> getNoticeList;
-
     public String getTitle() {
         return title;
     }
@@ -58,10 +56,4 @@ public class NoticeDto {    //getter, setter
         this.hit = hit;
     }
 
-    public List<NoticeDto> getGetNoticeList() {
-        return getNoticeList;
-    }
-    public void setGetNoticeList(List<NoticeDto> getNoticeList) {
-        this.getNoticeList = getNoticeList;
-    }
 }
