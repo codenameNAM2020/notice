@@ -71,9 +71,9 @@ public class NoticeController {
 
     //삭제
     @PostMapping("/delete/{id}")
-    public String deleteNotice(@PathVariable Integer id, Model model) {
+    public String deleteNotice(@PathVariable Integer id) {
 
-        model.addAttribute(noticeService.deleteNotice(id));
+        noticeService.deleteNotice(id);
 
         return "redirect:/";
     }
